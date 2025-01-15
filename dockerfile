@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 # Copy the rest of the application code into the container
 COPY . .
 
+# Add an empty __init__.py file to the browser_use directory
+RUN mkdir -p browser_use && touch browser_use/__init__.py
+
 # Add /app to the python path
 ENV PYTHONPATH=/app
 
