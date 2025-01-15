@@ -23,4 +23,5 @@ COPY . .
 EXPOSE 5000
 
 # Set the command to run when the container starts.
-CMD ["python", "app.py"]
+# This will properly run the app as a Python module
+CMD ["python", "-m", "browser_use.app"]
